@@ -1,14 +1,16 @@
 import React from "react";
 import styles from "./Post.module.css";
 
-const Post = () => {
+const Post = (props) => {
   return (
     <div className={styles.item}>
       <img src="https://d5nunyagcicgy.cloudfront.net/external_assets/hero_examples/hair_beach_v391182663/original.jpeg" />
-      Post 1
+      {props.message}
       <div>
-        <span>Repost </span>
-        <span>like</span>
+        {props.likesCount}
+        <span> like </span>
+        {props.RepostsCount}
+        <span> Repost </span>
       </div>
     </div>
   );

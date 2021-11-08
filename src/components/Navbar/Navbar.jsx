@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className={styles.item}>
         <a>Music </a>
       </div>
-      <div className={styles.item}>
+      <div className={`${styles.item} ${styles.last}`}>
         <a>Settings </a>
       </div>
     </nav>
