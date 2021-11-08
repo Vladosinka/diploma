@@ -4,11 +4,21 @@
 }
 
 .item{
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  font-weight: 700;
   text-align: center;
   padding: 20px 0px;
+}
+
+.item a{
+  color: rgb(105, 0, 105);
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 25px;
+  text-decoration: none;
+}
+
+.item a:hover{
+  background-color: #c7c8cc;
+  color: rgb(4, 0, 255);
 }
 
   .last{
