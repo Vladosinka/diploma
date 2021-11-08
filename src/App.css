@@ -1,10 +1,17 @@
 .app-wrapper {
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Dancing Script', cursive;
 }
 
 .flex{
   display: flex;
+}
+
+.app-wrapper-fon{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
 }
