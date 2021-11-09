@@ -3,18 +3,24 @@ import styles from "./UserList.module.css";
 import User from "./User/User";
 
 const UserList = (props) => {
+  let UserData = [
+    { id: 1, name: "Vasya" },
+    { id: 2, name: "Sveta" },
+    { id: 3, name: "Lena" },
+    { id: 4, name: "Katya" },
+    { id: 5, name: "Vlad" },
+    { id: 6, name: "Natasha" },
+    { id: 7, name: "Tolya" },
+    { id: 8, name: "Petya" },
+  ];
+
+  let UserElements = UserData.map((u) => (
+    <User NameUser={u.name} UserId={u.id} />
+  ));
+
   return (
     <div className={styles.item}>
-      <div className={styles.user}>
-        <User NameUser="Vasya" UserId="1" />
-        <User NameUser="Sveta" UserId="2" />
-        <User NameUser="Lena" UserId="3" />
-        <User NameUser="Katya" UserId="4" />
-        <User NameUser="Vlad" UserId="5" />
-        <User NameUser="Natasha" UserId="6" />
-        <User NameUser="Tolya" UserId="7" />
-        <User NameUser="Petya" UserId="8" />
-      </div>
+      <div className={styles.user}>{UserElements}</div>
     </div>
   );
 };
