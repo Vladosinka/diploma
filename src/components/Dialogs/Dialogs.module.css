@@ -1,8 +1,10 @@
 .title {
     font-size: 25px;
-    padding: 5px 25px;
-    box-sizing: border-box;
-    border-bottom: 2px solid #0033ff;
+    background-color: white;
+    width: calc(100% - 50px);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px 25px;
 }
 
 .flex {
