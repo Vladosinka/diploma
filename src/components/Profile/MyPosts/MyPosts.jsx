@@ -3,6 +3,7 @@ import styles from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
+  
   let postsData = [
     { id: 1, Post: "Hello, how are you?", RepostsCount: "15", likesCount: "20"},
     { id: 2, Post: "It's my first post", RepostsCount: "15", likesCount: "20" },
