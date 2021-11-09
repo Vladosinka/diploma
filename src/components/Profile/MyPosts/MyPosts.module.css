@@ -1,3 +1,9 @@
 .item{
   color: rgb(0, 0, 255);
 }
+.MyPosts{
+  background-color: white;
+  width: 100%;
+  border-radius: 5px;
+  margin: 5px 0px 0px 5px;
+}
