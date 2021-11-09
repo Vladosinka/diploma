@@ -1,3 +1,10 @@
-.item{
-    color: rgb(0, 0, 0);
+.title {
+    font-size: 25px;
+    padding: 5px 25px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #0033ff;
+}
+
+.flex {
+    display: flex;
 }
