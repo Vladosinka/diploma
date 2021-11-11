@@ -13,6 +13,14 @@ const MessageList = (props) => {
     { id: 6, Message: "Yo" },
     { id: 7, Message: "Yo" },
     { id: 8, Message: "Yo" },
+    { id: 9, Message: "Hi" },
+    { id: 10, Message: "At what stage is your diploma?" },
+    { id: 11, Message: "In developing" },
+    { id: 12, Message: "Well done, don't give up, you will succeed" },
+    { id: 13, Message: "Yo" },
+    { id: 14, Message: "Yo" },
+    { id: 15, Message: "Yo" },
+    { id: 16, Message: "Yo" },
   ];
 
   let MessageElements = MessageData.map((m) => <Message Message={m.Message} />);
