@@ -42,9 +42,20 @@ let MessageData = [
   { id: 16, Message: "Yo" },
 ];
 
+let PostData = [
+  { id: 1, Post: "Hello, how are you?", RepostsCount: "15", likesCount: "20"},
+  { id: 2, Post: "It's my first post", RepostsCount: "15", likesCount: "20" },
+  { id: 3, Post: "I'm fine", RepostsCount: "15", likesCount: "20" },
+  { id: 4, Post: "Yo", RepostsCount: "15", likesCount: "20" },
+  { id: 5, Post: "Yo", RepostsCount: "15", likesCount: "20" },
+  { id: 6, Post: "Yo", RepostsCount: "15", likesCount: "20" },
+  { id: 7, Post: "Yo", RepostsCount: "15", likesCount: "20" },
+  { id: 8, Post: "Yo", RepostsCount: "15", likesCount: "20" },
+];
+
 ReactDOM.render(
   <React.StrictMode>
-    <App UserData={UserData} MessageData={MessageData} />
+    <App UserData={UserData} MessageData={MessageData} PostData={PostData} />
   </React.StrictMode>,
   document.getElementById('root')
 );

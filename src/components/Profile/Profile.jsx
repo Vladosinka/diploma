@@ -5,7 +5,7 @@ import Avatar from "./Avatar/Avatar";
 import Friends from "./Friends/Friends";
 import Information from "./Information/Information";
 
-const Profile = () => {
+const Profile = (props) => {
   return (
     <div className={styles.profile}>
       <div className={styles.flex}>
@@ -14,7 +14,7 @@ const Profile = () => {
       </div>
       <div className={styles.flex}>
         <Friends />
-        <MyPosts />
+        <MyPosts PostData={props.PostData} />
       </div>
     </div>
   );
