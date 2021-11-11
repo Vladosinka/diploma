@@ -1,6 +1,8 @@
 .navbar {
   width: 150px;
   height: 500px;
+  top: 58px;
+  position: sticky;
 }
 
 .item{

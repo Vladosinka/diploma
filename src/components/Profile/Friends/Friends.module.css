@@ -1,7 +1,16 @@
 .Friends{
     background-color: white;
-    width: 230px;
+    height: max-content;
     border-radius: 5px;
-    padding: 10px 0px;
     margin: 5px 5px 0px 0px;
+}
+
+.title{
+    padding: 7px 20px;
+}
+
+.amountfriends{
+ width: 210px;
+ height: 180px;
+ padding: 6px 10px 8px;
 }
