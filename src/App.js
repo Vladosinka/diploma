@@ -18,7 +18,7 @@ const App = (props) => {
             <Navbar / >
               <div className = 'app-wrapper-fon'>
                   <Route path="/profile" render ={() => <Profile />} />
-                  <Route path="/dialogs" render ={() => <Dialogs />} />
+                  <Route path="/dialogs" render ={() => <Dialogs UserData={props.UserData} MessageData={props.MessageData}/>} />
                   <Route path="/feed" render ={() => <News />} />
                   <Route path="/music" render ={() => <Music />} />
                   <Route path="/settings" render ={() => <Settings />} />
