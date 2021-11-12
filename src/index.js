@@ -3,59 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-let UserData = [
-  { id: 1, name: "Vasya" },
-  { id: 2, name: "Sveta" },
-  { id: 3, name: "Lena" },
-  { id: 4, name: "Katya" },
-  { id: 5, name: "Vlad" },
-  { id: 6, name: "Natasha" },
-  { id: 7, name: "Tolya" },
-  { id: 8, name: "Petya" },
-  { id: 9, name: "Vasya" },
-  { id: 10, name: "Sveta" },
-  { id: 11, name: "Lena" },
-  { id: 12, name: "Katya" },
-  { id: 13, name: "Vlad" },
-  { id: 14, name: "Natasha" },
-  { id: 15, name: "Tolya" },
-  { id: 16, name: "Petya" },
-];
-
-let MessageData = [
-  { id: 1, Message: "Hi" },
-  { id: 2, Message: "At what stage is your diploma?" },
-  { id: 3, Message: "In developing" },
-  { id: 4, Message: "Well done, don't give up, you will succeed" },
-  { id: 5, Message: "Yo" },
-  { id: 6, Message: "Yo" },
-  { id: 7, Message: "Yo" },
-  { id: 8, Message: "Yo" },
-  { id: 9, Message: "Hi" },
-  { id: 10, Message: "At what stage is your diploma?" },
-  { id: 11, Message: "In developing" },
-  { id: 12, Message: "Well done, don't give up, you will succeed" },
-  { id: 13, Message: "Yo" },
-  { id: 14, Message: "Yo" },
-  { id: 15, Message: "Yo" },
-  { id: 16, Message: "Yo" },
-];
-
-let PostData = [
-  { id: 1, Post: "Hello, how are you?", RepostsCount: "15", likesCount: "20"},
-  { id: 2, Post: "It's my first post", RepostsCount: "15", likesCount: "20" },
-  { id: 3, Post: "I'm fine", RepostsCount: "15", likesCount: "20" },
-  { id: 4, Post: "Yo", RepostsCount: "15", likesCount: "20" },
-  { id: 5, Post: "Yo", RepostsCount: "15", likesCount: "20" },
-  { id: 6, Post: "Yo", RepostsCount: "15", likesCount: "20" },
-  { id: 7, Post: "Yo", RepostsCount: "15", likesCount: "20" },
-  { id: 8, Post: "Yo", RepostsCount: "15", likesCount: "20" },
-];
+import State from './redux/State'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App UserData={UserData} MessageData={MessageData} PostData={PostData} />
+    <App State={State} />
   </React.StrictMode>,
   document.getElementById('root')
 );
@@ -64,5 +16,3 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-

@@ -8,8 +8,8 @@ const Dialogs = (props) => {
     <div className={styles.item}>
       <div className={styles.title}>Dialogs</div>
       <div className={styles.flex}>
-        <UserList UserData={props.UserData} />
-        <MessageList MessageData={props.MessageData} />
+        <UserList UserData={props.State.UserData} />
+        <MessageList MessageData={props.State.MessageData} />
       </div>
     </div>
   );
