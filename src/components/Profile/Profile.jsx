@@ -13,7 +13,7 @@ const Profile = (props) => {
         <Information />
       </div>
       <div className={styles.flex}>
-        <Friends FriendsData={props.State.FriendsData} />
+        <Friends FriendsData={props.State.FriendsData} FriendsOnlineData={props.State.FriendsOnlineData} />
         <MyPosts PostData={props.State.PostData} />
       </div>
     </div>

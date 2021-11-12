@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Friends.module.css";
 import ViewFriends from "./ViewFriends/ViewFriends";
+import FriendsOnline from "./FriendsOnline/FriendsOnline"
 
 const Friends = (props) => {
 
@@ -11,12 +12,19 @@ const Friends = (props) => {
     />
   ));
 
+  let FriendsOnlineElement = props.FriendsOnlineData.map((p) => (
+    <FriendsOnline
+      FriendsName={p.FriendsName}
+      FriendsImage={p.FriendsImage}
+    />
+  ));
+
   return (
     <div className={styles.Friends}>
       <div className={styles.title}>Friends</div>
       <div className={styles.amountfriends}>{FriendsElements}</div>
       <div className={styles.title}>Friends only</div>
-      <div className={styles.amountfriends}></div>
+      <div className={styles.amountfriends}>{FriendsOnlineElement}</div>
     </div>
   );
 };

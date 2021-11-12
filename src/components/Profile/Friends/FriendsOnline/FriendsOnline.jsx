@@ -1,13 +1,13 @@
 import React from "react";
-import styles from "./ViewFriends.module.css";
+import styles from "./FriendsOnline.module.css";
 
-const ViewFriends = (props) => {
+const FriendsOnline = (props) => {
   return (
-    <div className={styles.ViewFriends}>
+    <div className={styles.FriendsOnline}>
         <div className={styles.imagefriends}>{props.FriendsImage}</div>
         <div className={styles.namefriends}>{props.FriendsName}</div>
     </div>
   );
 };
 
-export default ViewFriends;
+export default FriendsOnline;

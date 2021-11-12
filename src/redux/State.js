@@ -1,4 +1,4 @@
- let State = {
+let State = {
       ProfilePage:{
         PostData: [
             { id: 1, Post: "Hello, how are you?", RepostsCount: "15", likesCount: "20" },
@@ -9,12 +9,33 @@
             { id: 6, Post: "Yo", RepostsCount: "15", likesCount: "20" },
             { id: 7, Post: "Yo", RepostsCount: "15", likesCount: "20" },
             { id: 8, Post: "Yo", RepostsCount: "15", likesCount: "20" },
-          ],
+        ],
           
         FriendsData:[
-            { id: 1, FriendsName: "Vasya", FriendsImage: <img src="/image/4.jpg" /> }
+            { id: 1, FriendsName: "Vasya", FriendsImage: <img src="./imageFriends/1.jpg" /> },
+            { id: 2, FriendsName: "Petya", FriendsImage: <img src="./imageFriends/2.jpg" /> },
+            { id: 3, FriendsName: "Sasha", FriendsImage: <img src="./imageFriends/3.jpg" /> },
+            { id: 4, FriendsName: "Tanya", FriendsImage: <img src="./imageFriends/4.jpg" /> },
+            { id: 5, FriendsName: "Petya", FriendsImage: <img src="./imageFriends/5.jpg" /> },
+            { id: 6, FriendsName: "Nastya", FriendsImage: <img src="./imageFriends/6.jpg" /> },
+            { id: 7, FriendsName: "Yan", FriendsImage: <img src="./imageFriends/7.jpg" /> },
+            { id: 8, FriendsName: "Sergei", FriendsImage: <img src="./imageFriends/8.jpg" /> },
+            { id: 9, FriendsName: "Natasha", FriendsImage: <img src="./imageFriends/9.jpg" /> }
+        ],
+
+        FriendsOnlineData:[
+            { id: 5, FriendsName: "Petya", FriendsImage: <img src="./imageFriends/5.jpg" /> },
+            { id: 6, FriendsName: "Nastya", FriendsImage: <img src="./imageFriends/6.jpg" /> },
+            { id: 7, FriendsName: "Yan", FriendsImage: <img src="./imageFriends/7.jpg" /> },
+            { id: 8, FriendsName: "Sergei", FriendsImage: <img src="./imageFriends/8.jpg" /> },
+            { id: 9, FriendsName: "Natasha", FriendsImage: <img src="./imageFriends/9.jpg" /> },
+            { id: 1, FriendsName: "Vasya", FriendsImage: <img src="./imageFriends/1.jpg" /> },
+            { id: 2, FriendsName: "Petya", FriendsImage: <img src="./imageFriends/2.jpg" /> },
+            { id: 3, FriendsName: "Sasha", FriendsImage: <img src="./imageFriends/3.jpg" /> },
+            { id: 4, FriendsName: "Tanya", FriendsImage: <img src="./imageFriends/4.jpg" /> }
         ]
-      },
+  },
+
       MessagePage:{
         UserData: [
             { id: 1, name: "Vasya" },
