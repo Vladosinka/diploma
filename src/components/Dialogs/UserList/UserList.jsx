@@ -5,7 +5,7 @@ import User from "./User/User";
 const UserList = (props) => {
   
   let UserElements = props.UserData.map((u) => (
-    <User NameUser={u.name} UserId={u.id} />
+    <User UserImage={u.UserImage} NameUser={u.name} Lastname={u.Lastname} UserId={u.id} />
   ));
 
   return (

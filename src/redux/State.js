@@ -38,22 +38,15 @@ let State = {
 
       MessagePage:{
         UserData: [
-            { id: 1, name: "Vasya" },
-            { id: 2, name: "Sveta" },
-            { id: 3, name: "Lena" },
-            { id: 4, name: "Katya" },
-            { id: 5, name: "Vlad" },
-            { id: 6, name: "Natasha" },
-            { id: 7, name: "Tolya" },
-            { id: 8, name: "Petya" },
-            { id: 9, name: "Vasya" },
-            { id: 10, name: "Sveta" },
-            { id: 11, name: "Lena" },
-            { id: 12, name: "Katya" },
-            { id: 13, name: "Vlad" },
-            { id: 14, name: "Natasha" },
-            { id: 15, name: "Tolya" },
-            { id: 16, name: "Petya" },
+            { id: 7, name: "Yan", Lastname: "Ivanov", UserImage: <img src="./imageUser/7.jpg" /> },
+            { id: 8, name: "Sergei", Lastname: "Petrov", UserImage: <img src="./imageUser/8.jpg" /> },
+            { id: 9, name: "Natasha", Lastname: "Sidorov", UserImage: <img src="./imageUser/9.jpg" /> },
+            { id: 4, name: "Tanya", Lastname: "Smith", UserImage: <img src="./imageUser/4.jpg" /> },
+            { id: 5, name: "Petya", Lastname: "Ksavier", UserImage: <img src="./imageUser/5.jpg" /> },
+            { id: 6, name: "Nastya", Lastname: "Kipelov", UserImage: <img src="./imageUser/6.jpg" /> },
+            { id: 1, name: "Vasya", Lastname: "Bener", UserImage: <img src="./imageUser/1.jpg" /> },
+            { id: 2, name: "Petya", Lastname: "Stark", UserImage: <img src="./imageUser/2.jpg" /> },
+            { id: 3, name: "Sasha", Lastname: "Mask", UserImage: <img src="./imageUser/3.jpg" /> }
           ],
         MessageData: [
             { id: 1, Message: "Hi" },
