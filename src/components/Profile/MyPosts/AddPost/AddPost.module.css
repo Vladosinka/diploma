@@ -1,0 +1,27 @@
+.AddPost {
+  background-color: #fafbfc;
+  width: 510px;
+  height: 52px;
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin:0px 0px 10px 5px;
+}
+
+.Text{
+  width: 400px ;
+  height: 100%;
+  resize: none;
+  outline: none;
+}
+
+.Buttons{
+  margin-left: 20px;
+  border: none; outline: none;
+  background-color:transparent;
+}
+
+.Buttons img{
+  padding: 10px;
+  cursor: pointer;
+}

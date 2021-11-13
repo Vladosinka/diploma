@@ -20,19 +20,21 @@
     border-radius: 5px;
 }
 
-.Text{
-    width: 400px ;
+.Text {
+    width: 400px;
     height: 100%;
     resize: none;
+    outline: none;
 }
 
-.Buttons{
+.Buttons {
     margin-left: 20px;
-    border: none; border: none; outline: none;
-    background-color:transparent;
+    border: none;
+    outline: none;
+    background-color: transparent;
 }
 
-.Buttons img{
+.Buttons img {
     padding: 10px;
     cursor: pointer;
 }

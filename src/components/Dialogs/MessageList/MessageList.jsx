@@ -10,7 +10,7 @@ const MessageList = (props) => {
   let NewsendMessageElement = React.createRef();
   let sendMessage = () => {
     let textMessage = NewsendMessageElement.current.value;
-    alert(textMessage)
+    alert(textMessage);
   };
 
   return (
@@ -19,7 +19,15 @@ const MessageList = (props) => {
         <div className={styles.Message}>{MessageElements}</div>
         <div className={styles.wrapperText}>
           <div>
-            <textarea ref={NewsendMessageElement} className={styles.Text} name="" id="" cols="30" rows="10"></textarea>
+            <textarea
+              ref={NewsendMessageElement}
+              className={styles.Text}
+              placeholder="Send a message"
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
           </div>
           <div>
             <button className={styles.Buttons} onClick={sendMessage}>

@@ -1,9 +1,9 @@
 import React from "react";
+import AddPost from "./AddPost/AddPost";
 import styles from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-  
   let postsElements = props.PostData.map((p) => (
     <Post
       message={p.Post}
@@ -12,23 +12,14 @@ const MyPosts = (props) => {
     />
   ));
 
-let NewPostElement = React.createRef();
-
-let addPost = () => {
-  let text = NewPostElement.current.value;
-  alert(text)
-};
-
   return (
-    <div className={styles.MyPosts}>
+    <div>
       <div>
-        <textarea ref={NewPostElement}></textarea>
+        <AddPost />
       </div>
-      <div>
-        <button onClick={addPost}>Add post!</button>
+      <div className={styles.MyPosts}>
+        <div className={styles.posts}>{postsElements}</div>
       </div>
-      My posts
-      <div className={styles.posts}>{postsElements}</div>
     </div>
   );
 };
