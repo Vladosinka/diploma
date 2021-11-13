@@ -14,7 +14,7 @@ const Profile = (props) => {
       </div>
       <div className={styles.flex}>
         <Friends FriendsData={props.State.FriendsData} FriendsOnlineData={props.State.FriendsOnlineData} />
-        <MyPosts PostData={props.State.PostData} />
+        <MyPosts PostData={props.State.PostData} addPost={props.addPost}/>
       </div>
     </div>
   );

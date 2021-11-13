@@ -6,11 +6,12 @@ const MessageList = (props) => {
   let MessageElements = props.MessageData.map((m) => (
     <Message Message={m.Message} />
   ));
-
-  let NewsendMessageElement = React.createRef();
-  let sendMessage = () => {
-    let textMessage = NewsendMessageElement.current.value;
-    alert(textMessage);
+  
+  let NewaddMessageElement = React.createRef();
+  let addMessage = () => {
+    let text = NewaddMessageElement.current.value;
+    props.addMessage(text);
+    NewaddMessageElement.current.value = '';
   };
 
   return (
@@ -20,7 +21,7 @@ const MessageList = (props) => {
         <div className={styles.wrapperText}>
           <div>
             <textarea
-              ref={NewsendMessageElement}
+              ref={NewaddMessageElement}
               className={styles.Text}
               placeholder="Send a message"
               name=""
@@ -30,7 +31,7 @@ const MessageList = (props) => {
             ></textarea>
           </div>
           <div>
-            <button className={styles.Buttons} onClick={sendMessage}>
+            <button className={styles.Buttons} onClick={addMessage}>
               <img src="./image/icon/icons-button.png" alt="" />
             </button>
           </div>

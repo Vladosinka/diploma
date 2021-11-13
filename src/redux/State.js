@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from "../render";
+
 let State = {
       ProfilePage:{
         PostData: [
@@ -10,7 +12,7 @@ let State = {
             { id: 7, Post: "Yo", RepostsCount: "15", likesCount: "20" },
             { id: 8, Post: "Yo", RepostsCount: "15", likesCount: "20" },
         ],
-          
+
         FriendsData:[
             { id: 1, FriendsName: "Vasya", FriendsImage: <img src="./image/imageFriends/1.jpg" alt=''/> },
             { id: 2, FriendsName: "Petya", FriendsImage: <img src="./image/imageFriends/2.jpg" alt='' /> },
@@ -68,5 +70,25 @@ let State = {
           ],
       }
   }
+
+export  let addPost = (postMessage) => {
+      let newPost ={
+          id: 10,
+          Post: postMessage,
+          RepostsCount: 0,
+          likesCount: 0
+      };
+  State.ProfilePage.PostData.push(newPost);
+  rerenderEntireTree(State);
+}
+
+export  let addMessage = (Message) => {
+    let newMessage ={
+        id: 20,
+        Message: Message
+    };
+State.MessagePage.MessageData.push(newMessage);
+rerenderEntireTree(State);
+}
 
   export default State;

@@ -9,7 +9,7 @@ const Dialogs = (props) => {
       
       <div className={styles.flex}>
         <UserList UserData={props.State.UserData} />
-        <MessageList MessageData={props.State.MessageData} />
+        <MessageList MessageData={props.State.MessageData} addMessage={props.addMessage} />
       </div>
     </div>
   );

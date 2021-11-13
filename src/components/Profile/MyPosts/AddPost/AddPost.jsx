@@ -6,7 +6,8 @@ const AddPost = (props) => {
 
   let addPost = () => {
     let text = NewsendMessageElement.current.value;
-    alert(text);
+    props.addPost(text);
+    NewsendMessageElement.current.value = '';
   };
 
   return (
