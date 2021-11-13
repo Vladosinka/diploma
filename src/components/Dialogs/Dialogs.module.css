@@ -1,7 +1,7 @@
 .title {
     font-size: 25px;
     background-color: white;
-    width: calc(100% - 60px);
+    width: 767px;
     margin-bottom: 10px;
     border-radius: 5px;
     padding: 10px 25px;
@@ -10,5 +10,4 @@
 .flex {
     display: flex;
     height: 80vh;
-    padding-right: 10px;
 }

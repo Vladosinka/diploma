@@ -3,6 +3,8 @@
   height: 500px;
   top: 58px;
   position: sticky;
+  margin: 0 auto;
+  margin-right: 0;
 }
 
 .item{

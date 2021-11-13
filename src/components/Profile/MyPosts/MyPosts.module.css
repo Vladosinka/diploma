@@ -3,7 +3,8 @@
 }
 .MyPosts{
   background-color: white;
-  width: 100%;
+  width: 510px;
   border-radius: 5px;
+  padding: 8px 20px 0px;
   margin: 5px 10px 0px 5px;
 }

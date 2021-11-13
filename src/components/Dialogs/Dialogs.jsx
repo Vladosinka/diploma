@@ -6,7 +6,7 @@ import UserList from "./UserList/UserList";
 const Dialogs = (props) => {
   return (
     <div className={styles.item}>
-      <div className={styles.title}>Dialogs</div>
+      
       <div className={styles.flex}>
         <UserList UserData={props.State.UserData} />
         <MessageList MessageData={props.State.MessageData} />
