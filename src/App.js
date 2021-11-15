@@ -8,6 +8,7 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import { Route } from "react-router-dom";
+import { updateNewPostText } from "./redux/State";
 
 const App = (props) => {
   return ( 
@@ -16,7 +17,7 @@ const App = (props) => {
           <div className = 'flex'>
             <Navbar / >
               <div className = 'app-wrapper-fon'>
-                  <Route path="/profile" render ={() => <Profile State={props.State.ProfilePage} addPost={props.addPost} />} />
+                  <Route path="/profile" render ={() => <Profile State={props.State.ProfilePage} updateNewPostText={updateNewPostText} addPost={props.addPost} />} />
                   <Route path="/dialogs" render ={() => <Dialogs State={props.State.MessagePage} addMessage={props.addMessage} />} />
                   <Route path="/feed" render ={() => <News />} />
                   <Route path="/music" render ={() => <Music />} />

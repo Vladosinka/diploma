@@ -13,6 +13,8 @@ let State = {
             { id: 8, Post: "Yo", RepostsCount: "15", likesCount: "20" },
         ],
 
+        newPostText:"It-kamasutra.com",
+
         FriendsData:[
             { id: 1, FriendsName: "Vasya", FriendsImage: <img src="./image/imageFriends/1.jpg" alt=''/> },
             { id: 2, FriendsName: "Petya", FriendsImage: <img src="./image/imageFriends/2.jpg" alt='' /> },
@@ -71,16 +73,22 @@ let State = {
       }
   }
 
-export  let addPost = (postMessage) => {
+export  let addPost = () => {
       let newPost ={
           id: 10,
-          Post: postMessage,
+          Post: State.ProfilePage.newPostText,
           RepostsCount: 0,
           likesCount: 0
       };
   State.ProfilePage.PostData.push(newPost);
+  State.ProfilePage.newPostText = "";
   rerenderEntireTree(State);
 }
+
+export  let updateNewPostText = (newText) => {
+    State.ProfilePage.newPostText = newText;
+    rerenderEntireTree(State);
+    }
 
 export  let addMessage = (Message) => {
     let newMessage ={
@@ -91,4 +99,4 @@ State.MessagePage.MessageData.push(newMessage);
 rerenderEntireTree(State);
 }
 
-  export default State;
+export default State;
