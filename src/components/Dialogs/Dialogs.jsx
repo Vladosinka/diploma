@@ -7,10 +7,10 @@ const Dialogs = (props) => {
   return (
     <div className={styles.item}>
       <div className={styles.flex}>
-        <UserList UserData={props.State.UserData} />
+        <UserList UserData={props.MessagePage.UserData} />
         <MessageList
-          MessageData={props.State.MessageData}
-          newMessageText={props.State.newMessageText}
+          MessageData={props.MessagePage.MessageData}
+          newMessageText={props.MessagePage.newMessageText}
           AddMessage={props.AddMessage}
           updateNewMessageText={props.updateNewMessageText}
         />

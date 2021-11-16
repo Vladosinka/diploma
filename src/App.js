@@ -17,11 +17,28 @@ const App = (props) => {
           <div className = 'flex'>
             <Navbar / >
               <div className = 'app-wrapper-fon'>
-                  <Route path="/profile" render ={() => <Profile State={props.State.ProfilePage} updateNewPostText={props.updateNewPostText} addPost={props.addPost} />} />
-                  <Route path="/dialogs" render ={() => <Dialogs State={props.State.MessagePage} updateNewMessageText={props.updateNewMessageText} AddMessage={props.AddMessage} />} />
-                  <Route path="/feed" render ={() => <News />} />
-                  <Route path="/music" render ={() => <Music />} />
-                  <Route path="/settings" render ={() => <Settings />} />
+                  <Route path="/profile" render ={() => 
+                  <Profile 
+                  addPost={props.addPost}
+                  ProfilePage={props.State.ProfilePage} 
+                  updateNewPostText={props.updateNewPostText}/>} 
+                  />
+                  <Route path="/dialogs" render ={() => 
+                  <Dialogs 
+                  AddMessage={props.AddMessage}
+                  MessagePage={props.State.MessagePage} 
+                  updateNewMessageText={props.updateNewMessageText} />} 
+                  />
+                  <Route path="/feed" render ={() => 
+                  <News />} 
+                  />
+                  <Route path="/music" render ={() => 
+                  <Music />} 
+                  />
+                  <Route path="/settings" render ={() => 
+                  <Settings 
+                  />
+                  } />
               </div>
           </div>
       </div>
