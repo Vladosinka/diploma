@@ -1,0 +1,27 @@
+.wrapperText {
+    background-color: #fafbfc;
+    width: 500px;
+    height: 52px;
+    display: flex;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.Text {
+    width: 400px;
+    height: 100%;
+    resize: none;
+    outline: none;
+}
+
+.Buttons {
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.Buttons img {
+    padding: 10px;
+    cursor: pointer;
+}

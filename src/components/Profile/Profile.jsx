@@ -4,7 +4,6 @@ import MyPosts from "./MyPosts/MyPosts";
 import Avatar from "./Avatar/Avatar";
 import Friends from "./Friends/Friends";
 import Information from "./Information/Information";
-import { updateNewPostText } from "../../redux/State";
 
 const Profile = (props) => {
   return (
@@ -14,8 +13,16 @@ const Profile = (props) => {
         <Information />
       </div>
       <div className={styles.flex}>
-        <Friends FriendsData={props.State.FriendsData} FriendsOnlineData={props.State.FriendsOnlineData} />
-        <MyPosts PostData={props.State.PostData} newPostText={props.State.newPostText} addPost={props.addPost} updateNewPostText={updateNewPostText}/>
+        <Friends
+          FriendsData={props.State.FriendsData}
+          FriendsOnlineData={props.State.FriendsOnlineData}
+        />
+        <MyPosts
+          PostData={props.State.PostData}
+          newPostText={props.State.newPostText}
+          addPost={props.addPost}
+          updateNewPostText={props.updateNewPostText}
+        />
       </div>
     </div>
   );

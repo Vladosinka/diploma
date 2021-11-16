@@ -53,6 +53,9 @@ let State = {
             { id: 2, name: "Petya", Lastname: "Stark", UserImage: <img src="./image/imageUser/2.jpg" alt='' /> },
             { id: 3, name: "Sasha", Lastname: "Mask", UserImage: <img src="./image/imageUser/3.jpg" alt='' /> }
           ],
+
+        newMessageText:"It-kamasutra.com",
+
         MessageData: [
             { id: 1, Message: "Hi" },
             { id: 2, Message: "At what stage is your diploma?" },
@@ -70,7 +73,9 @@ let State = {
             { id: 14, Message: "Yo" },
             { id: 15, Message: "Yo" },
             { id: 16, Message: "Yo" },
-          ],
+          ]
+
+          
       }
   }
 
@@ -91,14 +96,20 @@ export  const updateNewPostText = (newText) => {
     rerenderEntireTree(State);
     }
 
-export  const addMessage = (Message) => {
+export  const AddMessage = (Message) => {
     let newMessage ={
         id: 20,
-        Message: Message
+        Message: State.MessagePage.newMessageText
     };
 State.MessagePage.MessageData.push(newMessage);
+State.MessagePage.newMessageText = "";
 rerenderEntireTree(State);
 }
+
+export  const updateNewMessageText = (newTextMessage) => {
+    State.MessagePage.newMessageText = newTextMessage;
+    rerenderEntireTree(State);
+    }
 
 export const subscribe = (observer) =>{
     rerenderEntireTree = observer;

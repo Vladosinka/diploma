@@ -1,5 +1,4 @@
 import React from "react";
-import { updateNewPostText } from "../../../redux/State";
 import AddPost from "./AddPost/AddPost";
 import styles from "./MyPosts.module.css";
 import Post from "./Post/Post";
@@ -16,7 +15,11 @@ const MyPosts = (props) => {
   return (
     <div>
       <div>
-        <AddPost addPost={props.addPost} newPostText={props.newPostText} updateNewPostText={updateNewPostText} />
+        <AddPost
+          addPost={props.addPost}
+          newPostText={props.newPostText}
+          updateNewPostText={props.updateNewPostText}
+        />
       </div>
       <div className={styles.MyPosts}>
         <div className={styles.posts}>{postsElements}</div>
