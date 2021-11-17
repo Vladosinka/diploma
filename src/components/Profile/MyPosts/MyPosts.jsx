@@ -14,15 +14,8 @@ const MyPosts = (props) => {
 
   return (
     <div>
-      <div>
-        <AddPost
-          dispatch={props.dispatch}
-          newPostText={props.newPostText}
-        />
-      </div>
-      <div className={styles.MyPosts}>
-        <div className={styles.posts}>{postsElements}</div>
-      </div>
+      <AddPost dispatch={props.dispatch} newPostText={props.newPostText} />
+      <div className={styles.MyPosts}>{postsElements}</div>
     </div>
   );
 };

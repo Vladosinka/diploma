@@ -9,7 +9,6 @@ const MessageList = (props) => {
   ));
 
   return (
-    <div>
       <div className={styles.MessageList}>
         <div className={styles.Message}>{MessageElements}</div>
         <AddMessage
@@ -17,7 +16,6 @@ const MessageList = (props) => {
           newMessageText={props.newMessageText}
         />
       </div>
-    </div>
   );
 };
 

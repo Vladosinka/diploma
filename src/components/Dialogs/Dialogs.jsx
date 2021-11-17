@@ -5,7 +5,6 @@ import UserList from "./UserList/UserList";
 
 const Dialogs = (props) => {
   return (
-    <div className={styles.item}>
       <div className={styles.flex}>
         <UserList UserData={props.MessagePage.UserData} />
         <MessageList
@@ -14,7 +13,6 @@ const Dialogs = (props) => {
           dispatch={props.dispatch}
         />
       </div>
-    </div>
   );
 };
 

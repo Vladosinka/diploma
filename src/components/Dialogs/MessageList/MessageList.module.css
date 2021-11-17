@@ -1,6 +1,4 @@
 .MessageList {
-    width: 520px;
-    height: 90vh;
     background-color: white;
     border-radius: 5px;
     margin-left: 5px;
@@ -8,7 +6,7 @@
 
 .Message {
     overflow-y: scroll;
-    height: 80vh;
+    height: 79vh;
 }
 
 .wrapperText {

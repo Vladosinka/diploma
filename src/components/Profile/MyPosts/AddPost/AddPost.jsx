@@ -1,21 +1,21 @@
 import React from "react";
+import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../../redux/State";
 import styles from "./AddPost.module.css";
 
 const AddPost = (props) => {
   let NewsendMessageElement = React.createRef();
 
   let addPost = () => {
-    props.dispatch({type: "ADD_POST"});
+    props.dispatch(addPostActionCreator());
   };
 
   let onPostChange = () => {
     let text = NewsendMessageElement.current.value;
-    props.dispatch({type: "UPDATE-NEW-POST-TEXT", newText: text});
+    props.dispatch(updateNewPostTextActionCreator(text));
   };
 
   return (
     <div className={styles.AddPost}>
-      <div>
         <textarea
           onChange={ onPostChange }
           value={props.newPostText}
@@ -23,12 +23,9 @@ const AddPost = (props) => {
           className={styles.Text}
           placeholder="Send a post"
         ></textarea>
-      </div>
-      <div>
         <button className={styles.Buttons} onClick={addPost}>
           <img src="./image/icon/icons-button.png" alt="" />
         </button>
-      </div>
     </div>
   );
 };
