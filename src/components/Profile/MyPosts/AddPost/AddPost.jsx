@@ -5,19 +5,19 @@ const AddPost = (props) => {
   let NewsendMessageElement = React.createRef();
 
   let addPost = () => {
-    props.addPost();
+    props.dispatch({type: "ADD_POST"});
   };
 
   let onPostChange = () => {
     let text = NewsendMessageElement.current.value;
-    props.updateNewPostText(text)
+    props.dispatch({type: "UPDATE-NEW-POST-TEXT", newText: text});
   };
 
   return (
     <div className={styles.AddPost}>
       <div>
         <textarea
-          onChange={onPostChange}
+          onChange={ onPostChange }
           value={props.newPostText}
           ref={NewsendMessageElement}
           className={styles.Text}

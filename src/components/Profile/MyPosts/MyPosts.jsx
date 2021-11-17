@@ -16,9 +16,8 @@ const MyPosts = (props) => {
     <div>
       <div>
         <AddPost
-          addPost={props.addPost}
+          dispatch={props.dispatch}
           newPostText={props.newPostText}
-          updateNewPostText={props.updateNewPostText}
         />
       </div>
       <div className={styles.MyPosts}>

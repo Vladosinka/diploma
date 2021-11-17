@@ -79,29 +79,16 @@ let Store = {
         }
     },
 
-    getState (){
-        return this._State;
-    },
-
     _callSubscriber () {
         console.log("State changed");
     },
 
-    addPost () {
-        let newPost ={
-            id: 10,
-            Post: this._State.ProfilePage.newPostText,
-            RepostsCount: 0,
-            likesCount: 0
-        };
-    this._State.ProfilePage.PostData.push(newPost);
-    this._State.ProfilePage.newPostText = "";
-    this._callSubscriber(this._State);
+    getState (){
+        return this._State;
     },
 
-    updateNewPostText (newText) {
-        this._State.ProfilePage.newPostText = newText;
-        this._callSubscriber(this._State);
+    subscribe (observer) {
+        this._callSubscriber = observer;
     },
 
     AddMessage () {
@@ -119,8 +106,21 @@ let Store = {
         this._callSubscriber(this._State);
     },
 
-    subscribe (observer) {
-        this._callSubscriber = observer;
+    dispatch(action){
+        if(action.type ==="ADD_POST"){
+            let newPost ={
+                id: 10,
+                Post: this._State.ProfilePage.newPostText,
+                RepostsCount: 0,
+                likesCount: 0
+            };
+        this._State.ProfilePage.PostData.push(newPost);
+        this._State.ProfilePage.newPostText = "";
+        this._callSubscriber(this._State);
+        } else if(action.type === "UPDATE-NEW-POST-TEXT"){
+            this._State.ProfilePage.newPostText = action.newText;
+            this._callSubscriber(this._State);
+        }
     }
 }
 
