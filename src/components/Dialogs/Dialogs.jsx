@@ -11,8 +11,7 @@ const Dialogs = (props) => {
         <MessageList
           MessageData={props.MessagePage.MessageData}
           newMessageText={props.MessagePage.newMessageText}
-          AddMessage={props.AddMessage}
-          updateNewMessageText={props.updateNewMessageText}
+          dispatch={props.dispatch}
         />
       </div>
     </div>

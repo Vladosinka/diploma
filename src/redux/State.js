@@ -91,21 +91,6 @@ let Store = {
         this._callSubscriber = observer;
     },
 
-    AddMessage () {
-        let newMessage ={
-            id: 20,
-            Message: this._State.MessagePage.newMessageText
-        };
-    this._State.MessagePage.MessageData.push(newMessage);
-    this._State.MessagePage.newMessageText = "";
-    this._callSubscriber(this._State);
-    },
-
-    updateNewMessageText (newTextMessage) {
-        this._State.MessagePage.newMessageText = newTextMessage;
-        this._callSubscriber(this._State);
-    },
-
     dispatch(action){
         if(action.type ==="ADD_POST"){
             let newPost ={
@@ -119,6 +104,18 @@ let Store = {
         this._callSubscriber(this._State);
         } else if(action.type === "UPDATE-NEW-POST-TEXT"){
             this._State.ProfilePage.newPostText = action.newText;
+            this._callSubscriber(this._State);
+        }
+        if(action.type ==="ADD_MESSAGE"){
+            let newMessage ={
+                id: 20,
+                Message: this._State.MessagePage.newMessageText
+            };
+        this._State.MessagePage.MessageData.push(newMessage);
+        this._State.MessagePage.newMessageText = "";
+        this._callSubscriber(this._State);
+        } else if (action.type === "UPDATE-NEW-MESSAGE-TEXT"){
+            this._State.MessagePage.newMessageText = action.newTextMessage;
             this._callSubscriber(this._State);
         }
     }

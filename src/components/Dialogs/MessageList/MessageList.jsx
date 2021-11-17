@@ -13,9 +13,8 @@ const MessageList = (props) => {
       <div className={styles.MessageList}>
         <div className={styles.Message}>{MessageElements}</div>
         <AddMessage
-          AddMessage={props.AddMessage}
+          dispatch={props.dispatch}
           newMessageText={props.newMessageText}
-          updateNewMessageText={props.updateNewMessageText}
         />
       </div>
     </div>
