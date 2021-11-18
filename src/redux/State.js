@@ -1,8 +1,5 @@
-const ADD_POST = "ADD_POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE_NEW_POST_TEXT";
-
-const ADD_MESSAGE = "ADD_MESSAGE";
-const UPDATE_NEW_MESSAGE_TEXT = "UPDATE_NEW_MESSAGE_TEXT";
+import MessageReducer from "./Message-reducer";
+import ProfileReducer from "./profile-reducer";
 
 let Store = {
 
@@ -98,41 +95,14 @@ let Store = {
     },
 
     dispatch(action){
-        if(action.type === ADD_POST ){
-            let newPost ={
-                id: 10,
-                Post: this._State.ProfilePage.newPostText,
-                RepostsCount: 0,
-                likesCount: 0
-            };
-        this._State.ProfilePage.PostData.push(newPost);
-        this._State.ProfilePage.newPostText = "";
+
+        this._State.ProfilePage = ProfileReducer(this._State.ProfilePage, action);
+        this._State.MessagePage = MessageReducer(this._State.MessagePage, action);
+        
         this._callSubscriber(this._State);
-        } else if(action.type === UPDATE_NEW_POST_TEXT){
-            this._State.ProfilePage.newPostText = action.newText;
-            this._callSubscriber(this._State);
         }
-        if(action.type ===ADD_MESSAGE){
-            let newMessage ={
-                id: 20,
-                Message: this._State.MessagePage.newMessageText
-            };
-        this._State.MessagePage.MessageData.push(newMessage);
-        this._State.MessagePage.newMessageText = "";
-        this._callSubscriber(this._State);
-        } else if (action.type === UPDATE_NEW_MESSAGE_TEXT){
-            this._State.MessagePage.newMessageText = action.newTextMessage;
-            this._callSubscriber(this._State);
-        }
-    },
 
 }
-
-export const addPostActionCreator = () => ({type: ADD_POST}) 
-export  const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
-
-export  const addMessageActionCreator = () => ({type: ADD_MESSAGE})
-export  const updateNewMessageTextActionCreator = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, newTextMessage: text})
 
 export default Store;
 window.Store = Store;
