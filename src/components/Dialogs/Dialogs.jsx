@@ -6,10 +6,11 @@ import UserList from "./UserList/UserList";
 const Dialogs = (props) => {
   return (
       <div className={styles.flex}>
-        <UserList UserData={props.MessagePage.UserData} />
+        <UserList 
+        Store={props.Store}
+        />
         <MessageList
-          MessageData={props.MessagePage.MessageData}
-          newMessageText={props.MessagePage.newMessageText}
+          Store={props.Store}
           dispatch={props.dispatch}
         />
       </div>

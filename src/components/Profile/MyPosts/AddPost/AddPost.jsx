@@ -4,6 +4,8 @@ import styles from "./AddPost.module.css";
 
 const AddPost = (props) => {
   let NewsendMessageElement = React.createRef();
+  
+  let state = props.Store.getState().ProfilePage
 
   let addPost = () => {
     props.dispatch(addPostActionCreator());
@@ -18,7 +20,7 @@ const AddPost = (props) => {
     <div className={styles.AddPost}>
         <textarea
           onChange={ onPostChange }
-          value={props.newPostText}
+          value={state.newPostText}
           ref={NewsendMessageElement}
           className={styles.Text}
           placeholder="Send a post"

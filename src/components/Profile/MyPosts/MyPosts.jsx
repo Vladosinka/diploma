@@ -4,7 +4,10 @@ import styles from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-  let postsElements = props.PostData.map((p) => (
+
+  let state = props.Store.getState().ProfilePage
+
+  let postsElements = state.PostData.map((p) => (
     <Post
       message={p.Post}
       RepostsCount={p.RepostsCount}
@@ -14,7 +17,7 @@ const MyPosts = (props) => {
 
   return (
     <div>
-      <AddPost dispatch={props.dispatch} newPostText={props.newPostText} />
+      <AddPost Store={props.Store} dispatch={props.dispatch} />
       <div className={styles.MyPosts}>{postsElements}</div>
     </div>
   );

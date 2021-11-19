@@ -3,10 +3,13 @@ import { addMessageActionCreator, updateNewMessageTextActionCreator } from "../.
 import styles from "./AddMessage.module.css";
 
 const AddMessage = (props) => {
+
+  let state = props.Store.getState().MessagePage
+
   let NewaddMessageElement = React.createRef();
 
   let AddMessage = () => {
-   props.dispatch(addMessageActionCreator());
+    props.dispatch(addMessageActionCreator());
   };
 
   let onMessageChange = () => {
@@ -18,7 +21,7 @@ const AddMessage = (props) => {
         <div className={styles.wrapperText}>
             <textarea 
             onChange={onMessageChange}
-            value={props.newMessageText}
+            value={state.newMessageText}
             ref={NewaddMessageElement} 
             className={styles.Text} 
             placeholder="Send a message"></textarea>

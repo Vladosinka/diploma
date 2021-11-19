@@ -3,7 +3,10 @@ import styles from "./UserList.module.css";
 import User from "./User/User";
 
 const UserList = (props) => {
-  let UserElements = props.UserData.map((u) => (
+
+  let state = props.Store.getState().MessagePage
+
+  let UserElements = state.UserData.map((u) => (
     <User
       UserImage={u.UserImage}
       NameUser={u.name}

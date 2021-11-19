@@ -4,7 +4,9 @@ import Message from "./Message/Message";
 import AddMessage from "./AddMessage/AddMessage";
 
 const MessageList = (props) => {
-  let MessageElements = props.MessageData.map((m) => (
+  let state = props.Store.getState().MessagePage
+
+  let MessageElements = state.MessageData.map((m) => (
     <Message Message={m.Message} />
   ));
 
@@ -13,7 +15,7 @@ const MessageList = (props) => {
         <div className={styles.Message}>{MessageElements}</div>
         <AddMessage
           dispatch={props.dispatch}
-          newMessageText={props.newMessageText}
+          Store={props.Store}
         />
       </div>
   );

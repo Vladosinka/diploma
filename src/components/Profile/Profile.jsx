@@ -14,12 +14,10 @@ const Profile = (props) => {
       </div>
       <div className={styles.flex}>
         <Friends
-          FriendsData={props.ProfilePage.FriendsData}
-          FriendsOnlineData={props.ProfilePage.FriendsOnlineData}
+          Store={props.Store}
         />
         <MyPosts
-          PostData={props.ProfilePage.PostData}
-          newPostText={props.ProfilePage.newPostText}
+          Store={props.Store}
           dispatch={props.dispatch}
         />
       </div>
