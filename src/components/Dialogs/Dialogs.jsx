@@ -5,15 +5,10 @@ import UserList from "./UserList/UserList";
 
 const Dialogs = (props) => {
   return (
-      <div className={styles.flex}>
-        <UserList 
-        Store={props.Store}
-        />
-        <MessageList
-          Store={props.Store}
-          dispatch={props.dispatch}
-        />
-      </div>
+    <div className={styles.flex}>
+      <UserList Store={props.Store} />
+      <MessageList Store={props.Store} />
+    </div>
   );
 };
 

@@ -1,11 +1,10 @@
 import React from "react";
-import AddPost from "./AddPost/AddPost";
+import AddPostContainer from "./AddPost/AddPostContainer";
 import styles from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-
-  let state = props.Store.getState().ProfilePage
+  let state = props.Store.getState().ProfilePage;
 
   let postsElements = state.PostData.map((p) => (
     <Post
@@ -17,7 +16,7 @@ const MyPosts = (props) => {
 
   return (
     <div>
-      <AddPost Store={props.Store} dispatch={props.dispatch} />
+      <AddPostContainer Store={props.Store} />
       <div className={styles.MyPosts}>{postsElements}</div>
     </div>
   );

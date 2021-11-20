@@ -18,7 +18,6 @@ const Profile = (props) => {
         />
         <MyPosts
           Store={props.Store}
-          dispatch={props.dispatch}
         />
       </div>
     </div>

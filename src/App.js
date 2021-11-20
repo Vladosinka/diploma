@@ -19,13 +19,11 @@ const App = (props) => {
               <div className = 'app-wrapper-fon'>
                   <Route path="/profile" render ={() => 
                   <Profile 
-                  Store={props.Store}
-                  dispatch={props.dispatch}/>} 
+                  Store={props.Store}/>} 
                   />
                   <Route path="/dialogs" render ={() => 
                   <Dialogs 
-                  Store={props.Store}
-                  dispatch={props.dispatch}/>}
+                  Store={props.Store}/>}
                   />
                   <Route path="/feed" render ={() => 
                   <News />} 

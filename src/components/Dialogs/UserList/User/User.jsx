@@ -8,8 +8,10 @@ const User = (props) => {
       <div className={styles.user}>
         <NavLink to={"/dialogs/" + props.UserId}>
           <div className={styles.flex}>
-            <div >{props.UserImage}</div>
-            <div className={styles.name}>{props.NameUser} {props.Lastname}</div>
+            <div>{props.UserImage}</div>
+            <div className={styles.name}>
+              {props.NameUser} {props.Lastname}
+            </div>
           </div>
         </NavLink>
       </div>

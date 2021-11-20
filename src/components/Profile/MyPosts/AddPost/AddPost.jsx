@@ -1,33 +1,30 @@
 import React from "react";
-import { addPostActionCreator, updateNewPostTextActionCreator } from "../../../../redux/profile-reducer";
 import styles from "./AddPost.module.css";
 
 const AddPost = (props) => {
   let NewsendMessageElement = React.createRef();
-  
-  let state = props.Store.getState().ProfilePage
 
   let addPost = () => {
-    props.dispatch(addPostActionCreator());
+    props.addPost();
   };
 
   let onPostChange = () => {
     let text = NewsendMessageElement.current.value;
-    props.dispatch(updateNewPostTextActionCreator(text));
+    props.updateNewPostText(text);
   };
 
   return (
     <div className={styles.AddPost}>
-        <textarea
-          onChange={ onPostChange }
-          value={state.newPostText}
-          ref={NewsendMessageElement}
-          className={styles.Text}
-          placeholder="Send a post"
-        ></textarea>
-        <button className={styles.Buttons} onClick={addPost}>
-          <img src="./image/icon/icons-button.png" alt="" />
-        </button>
+      <textarea
+        onChange={onPostChange}
+        value={props.newPostText}
+        ref={NewsendMessageElement}
+        className={styles.Text}
+        placeholder="Send a post"
+      ></textarea>
+      <button className={styles.Buttons} onClick={addPost}>
+        <img src="./image/icon/icons-button.png" alt="" />
+      </button>
     </div>
   );
 };
