@@ -1,19 +1,22 @@
 import React from "react";
 import styles from "./MessageList.module.css";
 import Message from "./Message/Message";
-import AddMessageContainer from "./AddMessage/AddMessageContainer";
+import AddMessage from "./AddMessage/AddMessage";
 
-const MessageList = (props) => {
-  let state = props.Store.getState().MessagePage;
+const MessageList = (props) => { debugger;
 
-  let MessageElements = state.MessageData.map((m) => (
+  let MessageElements = props.MessageData.map((m) => (
     <Message Message={m.Message} />
   ));
 
   return (
     <div className={styles.MessageList}>
       <div className={styles.Message}>{MessageElements}</div>
-      <AddMessageContainer Store={props.Store} />
+      <AddMessage
+            newMessageText={props.newMessageText}
+            AddMessage={props.AddMessage}
+            onMessageChange={props.onMessageChange}
+       />
     </div>
   );
 };

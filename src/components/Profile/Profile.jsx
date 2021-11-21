@@ -1,22 +1,22 @@
 import React from "react";
 import styles from "./Profile.module.css";
-import MyPosts from "./MyPosts/MyPosts";
-import Avatar from "./Avatar/Avatar";
-import Friends from "./Friends/Friends";
-import Information from "./Information/Information";
+import AvatarContainer from "./Avatar/AvatarContainer";
+import FriendsContainer from "./Friends/FriendsContainer";
+import InformationContainer from "./Information/InformationContainer";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = (props) => {
   return (
     <div className={styles.profile}>
       <div className={styles.flex}>
-        <Avatar />
-        <Information />
+        <AvatarContainer />
+        <InformationContainer />
       </div>
       <div className={styles.flex}>
-        <Friends
+        <FriendsContainer
           Store={props.Store}
         />
-        <MyPosts
+        <MyPostsContainer
           Store={props.Store}
         />
       </div>

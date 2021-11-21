@@ -1,12 +1,11 @@
 import React from "react";
-import AddPostContainer from "./AddPost/AddPostContainer";
+import AddPost from "./AddPost/AddPost";
 import styles from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-  let state = props.Store.getState().ProfilePage;
 
-  let postsElements = state.PostData.map((p) => (
+  let postsElements = props.PostData.map((p) => (
     <Post
       message={p.Post}
       RepostsCount={p.RepostsCount}
@@ -16,7 +15,11 @@ const MyPosts = (props) => {
 
   return (
     <div>
-      <AddPostContainer Store={props.Store} />
+      <AddPost
+        newPostText={props.newPostText}
+        updateNewPostText={props.updateNewPostText}
+        addPost={props.addPost}
+      />
       <div className={styles.MyPosts}>{postsElements}</div>
     </div>
   );

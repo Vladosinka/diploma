@@ -1,8 +1,9 @@
 import React from "react";
-import {addPostActionCreator,updateNewPostTextActionCreator} from "../../../../redux/profile-reducer";
-import AddPost from "./AddPost";
+import {addPostActionCreator,updateNewPostTextActionCreator} from "../../../redux/profile-reducer";
+import MyPosts from "./MyPosts";
 
-const AddPostContainer = (props) => {
+
+const MyPostsContainer = (props) => {
   let state = props.Store.getState().ProfilePage;
 
   let addPost = () => {
@@ -15,12 +16,13 @@ const AddPostContainer = (props) => {
   };
 
   return (
-    <AddPost
+    <MyPosts
+      PostData={state.PostData}
+      newPostText={state.newPostText}
       updateNewPostText={onPostChange}
       addPost={addPost}
-      newPostText={state.newPostText}
     />
   );
 };
 
-export default AddPostContainer;
+export default MyPostsContainer;

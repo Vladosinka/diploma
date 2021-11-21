@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./Dialogs.module.css";
-import MessageList from "./MessageList/MessageList";
-import UserList from "./UserList/UserList";
+import MessageListContainer from "./MessageList/MessageListContainer";
+import UserListContainer from "./UserList/UserListContainer";
 
 const Dialogs = (props) => {
   return (
     <div className={styles.flex}>
-      <UserList Store={props.Store} />
-      <MessageList Store={props.Store} />
+      <UserListContainer Store={props.Store} />
+      <MessageListContainer Store={props.Store} />
     </div>
   );
 };

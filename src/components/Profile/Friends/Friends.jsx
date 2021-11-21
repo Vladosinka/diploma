@@ -4,13 +4,12 @@ import ViewFriends from "./ViewFriends/ViewFriends";
 import FriendsOnline from "./FriendsOnline/FriendsOnline";
 
 const Friends = (props) => {
-  let state = props.Store.getState().ProfilePage;
 
-  let FriendsElements = state.FriendsData.map((p) => (
+  let FriendsElements = props.FriendsData.map((p) => (
     <ViewFriends FriendsName={p.FriendsName} FriendsImage={p.FriendsImage} />
   ));
 
-  let FriendsOnlineElement = state.FriendsOnlineData.map((p) => (
+  let FriendsOnlineElement = props.FriendsOnlineData.map((p) => (
     <FriendsOnline FriendsName={p.FriendsName} FriendsImage={p.FriendsImage} />
   ));
 

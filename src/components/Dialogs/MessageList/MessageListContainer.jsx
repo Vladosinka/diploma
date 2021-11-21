@@ -1,8 +1,8 @@
 import React from "react";
-import {addMessageActionCreator, updateNewMessageTextActionCreator} from "../../../../redux/Message-reducer";
-import AddMessage from "./AddMessage";
+import {addMessageActionCreator, updateNewMessageTextActionCreator} from "../../../redux/Message-reducer";
+import MessageList from "./MessageList";
 
-const AddMessageContainer = (props) => {
+const MessageListContainer = (props) => {
   let state = props.Store.getState().MessagePage;
 
   let AddMessages = () => {
@@ -14,7 +14,8 @@ const AddMessageContainer = (props) => {
   };
 
   return (
-    <AddMessage
+    <MessageList
+      MessageData={state.MessageData}
       newMessageText={state.newMessageText}
       AddMessage={AddMessages}
       onMessageChange={onMessageChange}
@@ -22,4 +23,4 @@ const AddMessageContainer = (props) => {
   );
 };
 
-export default AddMessageContainer;
+export default MessageListContainer;
