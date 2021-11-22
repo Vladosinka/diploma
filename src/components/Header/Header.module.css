@@ -1,5 +1,5 @@
 .header {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(247 247 247);;
   height: 48px;
   margin: 0 10px 10px 10px;
   top: 0;
@@ -7,6 +7,6 @@
 }
 
 .header img {
-  padding: 5px 40px;
-  width: 30px;
+  padding: 0px 40px;
+  width: 40px;
 }

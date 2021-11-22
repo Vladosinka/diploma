@@ -3,10 +3,10 @@ import styles from "./MessageList.module.css";
 import Message from "./Message/Message";
 import AddMessage from "./AddMessage/AddMessage";
 
-const MessageList = (props) => { debugger;
+const MessageList = (props) => {
 
   let MessageElements = props.MessagePage.MessageData.map((m) => (
-    <Message Message={m.Message} />
+    <Message Message={m.Message} key={m.id} />
   ));
 
   return (

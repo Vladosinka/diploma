@@ -6,6 +6,7 @@ const UserList = (props) => {
 
   let UserElements = props.MessagePage.UserData.map((u) => (
     <User
+      key={u.id}
       UserImage={u.UserImage}
       NameUser={u.name}
       Lastname={u.Lastname}

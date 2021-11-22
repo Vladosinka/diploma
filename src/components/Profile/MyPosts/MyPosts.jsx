@@ -7,6 +7,7 @@ const MyPosts = (props) => {
 
   let postsElements = props.ProfilePage.PostData.map((p) => (
     <Post
+      key={p.id}
       message={p.Post}
       RepostsCount={p.RepostsCount}
       likesCount={p.likesCount}
