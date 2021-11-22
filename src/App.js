@@ -18,12 +18,10 @@ const App = (props) => {
             <Navbar / >
               <div className = 'app-wrapper-fon'>
                   <Route path="/profile" render ={() => 
-                  <Profile 
-                  Store={props.Store}/>} 
+                  <Profile />} 
                   />
                   <Route path="/dialogs" render ={() => 
-                  <Dialogs 
-                  Store={props.Store}/>}
+                  <Dialogs />}
                   />
                   <Route path="/feed" render ={() => 
                   <News />} 

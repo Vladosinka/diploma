@@ -4,7 +4,7 @@ import User from "./User/User";
 
 const UserList = (props) => {
 
-  let UserElements = props.UserData.map((u) => (
+  let UserElements = props.MessagePage.UserData.map((u) => (
     <User
       UserImage={u.UserImage}
       NameUser={u.name}

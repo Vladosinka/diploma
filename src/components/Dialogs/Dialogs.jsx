@@ -6,8 +6,8 @@ import UserListContainer from "./UserList/UserListContainer";
 const Dialogs = (props) => {
   return (
     <div className={styles.flex}>
-      <UserListContainer Store={props.Store} />
-      <MessageListContainer Store={props.Store} />
+      <UserListContainer/>
+      <MessageListContainer/>
     </div>
   );
 };

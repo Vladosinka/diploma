@@ -1,11 +1,12 @@
-import React from "react";
 import Avatar from "./Avatar";
+import { connect } from "react-redux";
 
-
-const AvatarContainer = () => {
-  return(
-    <Avatar />
-  )
+let mapStateToProps = (state) => {
+  return {
+    ProfilePage: state.ProfilePage,
+  };
 };
+
+const AvatarContainer = connect(mapStateToProps, )(Avatar);
 
 export default AvatarContainer;

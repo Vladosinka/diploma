@@ -5,7 +5,7 @@ import AddMessage from "./AddMessage/AddMessage";
 
 const MessageList = (props) => { debugger;
 
-  let MessageElements = props.MessageData.map((m) => (
+  let MessageElements = props.MessagePage.MessageData.map((m) => (
     <Message Message={m.Message} />
   ));
 
@@ -13,7 +13,7 @@ const MessageList = (props) => { debugger;
     <div className={styles.MessageList}>
       <div className={styles.Message}>{MessageElements}</div>
       <AddMessage
-            newMessageText={props.newMessageText}
+            newMessageText={props.MessagePage.newMessageText}
             AddMessage={props.AddMessage}
             onMessageChange={props.onMessageChange}
        />

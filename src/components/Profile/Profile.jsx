@@ -13,12 +13,8 @@ const Profile = (props) => {
         <InformationContainer />
       </div>
       <div className={styles.flex}>
-        <FriendsContainer
-          Store={props.Store}
-        />
-        <MyPostsContainer
-          Store={props.Store}
-        />
+        <FriendsContainer/>
+        <MyPostsContainer/>
       </div>
     </div>
   );

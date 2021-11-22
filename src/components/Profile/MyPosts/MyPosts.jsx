@@ -5,7 +5,7 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
 
-  let postsElements = props.PostData.map((p) => (
+  let postsElements = props.ProfilePage.PostData.map((p) => (
     <Post
       message={p.Post}
       RepostsCount={p.RepostsCount}
@@ -16,7 +16,7 @@ const MyPosts = (props) => {
   return (
     <div>
       <AddPost
-        newPostText={props.newPostText}
+        newPostText={props.ProfilePage.newPostText}
         updateNewPostText={props.updateNewPostText}
         addPost={props.addPost}
       />

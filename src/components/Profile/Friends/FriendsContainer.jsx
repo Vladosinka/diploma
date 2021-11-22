@@ -1,18 +1,13 @@
-import React from "react";
 import Friends from "./Friends";
+import { connect } from "react-redux";
 
-
-const FriendsContainer = (props) => {
-  let state = props.Store.getState().ProfilePage;
-
-
-
-  return (
-    <Friends 
-      FriendsData={state.FriendsData}
-      FriendsOnlineData={state.FriendsOnlineData}
-    />
-  );
+let mapStateToProps = (state) => {
+  return {
+    ProfilePage: state.ProfilePage
+  };
 };
+
+
+const FriendsContainer = connect(mapStateToProps, )(Friends);
 
 export default FriendsContainer;

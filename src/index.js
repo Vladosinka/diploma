@@ -5,26 +5,16 @@ import {BrowserRouter} from "react-router-dom";
 import './index.css';
 import App from './App';
 import Store from "./redux/redux-Store";
+import { Provider } from 'react-redux';
 
-let rerenderEntireTree = (State) => {
   ReactDOM.render( 
     <BrowserRouter >
-      <App
-      Store = {Store}
-      State = {State}
-      dispatch = {Store.dispatch.bind(Store)}
-      /> 
+      <Provider store={Store}>
+        <App /> 
+      </Provider>
     </BrowserRouter>,
   document.getElementById('root')
   );
-}
-
-rerenderEntireTree(Store.getState ());
-
-Store.subscribe(() => {
-  let State = Store.getState ()
-  rerenderEntireTree(State)
-});
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
