@@ -1,0 +1,7 @@
+.Friends{
+    background-color: white;
+    width: 817px;
+    height: 90vh;
+    overflow-y:scroll ;
+    border-radius: 5px;
+}

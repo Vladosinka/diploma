@@ -62,4 +62,5 @@ let initialState = {
 
 export  const addMessageActionCreator = () => ({type: ADD_MESSAGE})
 export  const updateNewMessageTextActionCreator = (text) => ({type: UPDATE_NEW_MESSAGE_TEXT, newTextMessage: text})
+
 export default MessageReducer;
