@@ -4,7 +4,7 @@ import AvatarContainer from "./Avatar/AvatarContainer";
 import FriendsContainer from "./Friends/FriendsContainer";
 import InformationContainer from "./Information/InformationContainer";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
-import MyPhoto from "./MyPhoto/MyPhoto";
+import MyPhotoContainer from "./MyPhoto/MyPhotoContainer";
 
 const Profile = (props) => {
   return (
@@ -13,7 +13,7 @@ const Profile = (props) => {
         <AvatarContainer />
         <div>
         <InformationContainer />
-        < MyPhoto />
+        <MyPhotoContainer />
         </div>
       </div>
       <div className={styles.flex}>

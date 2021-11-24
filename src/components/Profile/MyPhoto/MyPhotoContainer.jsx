@@ -3,11 +3,10 @@ import { connect } from "react-redux";
 
 let mapStateToProps = (state) => {
   return {
-    ProfilePage: state.ProfilePage,
+    ProfilePage: state.ProfilePage
   };
 };
 
-
-const MyPhotoContainer = connect(mapStateToProps, )(MyPhoto);
+const MyPhotoContainer = connect(mapStateToProps)(MyPhoto);
 
 export default MyPhotoContainer;

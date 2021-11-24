@@ -41,10 +41,10 @@ let initialState = {
     ],
 
     MyPhotoData:[
-        {MyPhoto: <img src="./image/imageMyPhoto/1.jpg" alt='' /> },
-        {MyPhoto: <img src="./image/imageMyPhoto/2.jpg" alt='' /> },
-        {MyPhoto: <img src="./image/imageMyPhoto/3.jpg" alt='' /> },
-        {MyPhoto: <img src="./image/imageMyPhoto/4.jpg" alt='' /> },
+        {id: "1", MyPhoto: <img src="./image/imageMyPhoto/1.jpg" alt='' /> },
+        {id: "2", MyPhoto: <img src="./image/imageMyPhoto/2.jpg" alt='' /> },
+        {id: "3", MyPhoto: <img src="./image/imageMyPhoto/3.jpg" alt='' /> },
+        {id: "4", MyPhoto: <img src="./image/imageMyPhoto/4.jpg" alt='' /> }
     ]
 };
 
