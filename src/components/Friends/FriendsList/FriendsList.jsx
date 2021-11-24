@@ -9,6 +9,7 @@ const FriendsList = (props) => {
       nameFriends={f.name}
       lastnameFriends={f.Lastname}
       userImageFriends={f.UserImage}
+      Status={f.Status}
       followedFriends={f.followed}
       FriendsId={f.id}
       follow={props.follow}

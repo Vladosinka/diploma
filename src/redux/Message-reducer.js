@@ -22,7 +22,7 @@ let initialState = {
         { id: 16, Message: "Yo" },
       ],
 
-    newMessageText:"It-kamasutra.com",
+    newMessageText:"",
 
     UserData: [
         { id: 7, name: "Yan", Lastname: "Ivanov", UserImage: <img src="./image/imageUser/7.jpg" alt='' /> },

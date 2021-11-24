@@ -17,7 +17,7 @@ let Store = {
               { id: 8, Post: "Yo", RepostsCount: "15", likesCount: "20" },
           ],
   
-          newPostText:"It-kamasutra.com",
+          newPostText:"",
   
           FriendsData:[
               { id: 1, FriendsName: "Vasya", FriendsImage: <img src="./image/imageFriends/1.jpg" alt=''/> },
@@ -65,7 +65,7 @@ let Store = {
               { id: 16, Message: "Yo" },
             ],
   
-          newMessageText:"It-kamasutra.com",
+          newMessageText:"",
   
           UserData: [
               { id: 7, name: "Yan", Lastname: "Ivanov", UserImage: <img src="./image/imageUser/7.jpg" alt='' /> },
