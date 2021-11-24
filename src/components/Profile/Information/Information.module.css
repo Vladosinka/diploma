@@ -1,8 +1,12 @@
 .Information{
     background-color: white;
     width: 530px;
-    height: 205px;
+    height: 359px;
     padding: 20px 15px;
     border-radius: 5px;
     margin: 0px 0px 5px 5px;
+}
+
+.Title{
+    border-bottom: 2px solid rgba(225, 227, 230, 1) ;
 }

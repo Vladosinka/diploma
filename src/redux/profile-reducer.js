@@ -38,6 +38,13 @@ let initialState = {
         { id: 2, FriendsName: "Petya", FriendsImage: <img src="./image/imageFriends/2.jpg" alt='' /> },
         { id: 3, FriendsName: "Sasha", FriendsImage: <img src="./image/imageFriends/3.jpg" alt='' /> },
         { id: 4, FriendsName: "Tanya", FriendsImage: <img src="./image/imageFriends/4.jpg" alt='' /> }
+    ],
+
+    MyPhotoData:[
+        {MyPhoto: <img src="./image/imageMyPhoto/1.jpg" alt='' /> },
+        {MyPhoto: <img src="./image/imageMyPhoto/2.jpg" alt='' /> },
+        {MyPhoto: <img src="./image/imageMyPhoto/3.jpg" alt='' /> },
+        {MyPhoto: <img src="./image/imageMyPhoto/4.jpg" alt='' /> },
     ]
 };
 

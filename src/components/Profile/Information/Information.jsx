@@ -4,7 +4,7 @@ import styles from "./Information.module.css";
 const Information = () => {
   return (
     <div className={styles.Information}>
-Information
+      <div className={styles.Title}>Information</div>
     </div>
   );
 };
