@@ -11,6 +11,7 @@ const MyPosts = (props) => {
       message={p.Post}
       RepostsCount={p.RepostsCount}
       likesCount={p.likesCount}
+      PostImage={p.PostImage}
     />
   ));
 

@@ -4,14 +4,15 @@ const UPDATE_NEW_POST_TEXT = "UPDATE_NEW_POST_TEXT";
 let initialState = {
 
     PostData: [
-        { id: 1, Post: "Hello, how are you?", RepostsCount: "15", likesCount: "20" },
-        { id: 2, Post: "It's my first post", RepostsCount: "15", likesCount: "20" },
-        { id: 3, Post: "I'm fine", RepostsCount: "15", likesCount: "20" },
-        { id: 4, Post: "Yo", RepostsCount: "15", likesCount: "20" },
-        { id: 5, Post: "Yo", RepostsCount: "15", likesCount: "20" },
-        { id: 6, Post: "Yo", RepostsCount: "15", likesCount: "20" },
-        { id: 7, Post: "Yo", RepostsCount: "15", likesCount: "20" },
-        { id: 8, Post: "Yo", RepostsCount: "15", likesCount: "20" },
+        { id: 1, Post: "Hello, how are you?", RepostsCount: "15", likesCount: "20", PostImage: <img src="./image/imageUser/1.jpg" alt=''/> },
+        { id: 2, Post: "It's my first post", RepostsCount: "15", likesCount: "20", PostImage: <img src="./image/imageUser/2.jpg" alt=''/> },
+        { id: 3, Post: "I'm fine", RepostsCount: "15", likesCount: "20", PostImage: <img src="./image/imageUser/3.jpg" alt=''/> },
+        { id: 4, Post: "Yo", RepostsCount: "15", likesCount: "20", PostImage: <img src="./image/imageUser/4.jpg" alt=''/> },
+        { id: 5, Post: "Yo", RepostsCount: "15", likesCount: "20", PostImage: <img src="./image/imageUser/5.jpg" alt=''/> },
+        { id: 6, Post: "Yo", RepostsCount: "15", likesCount: "20", PostImage: <img src="./image/imageUser/6.jpg" alt=''/> },
+        { id: 7, Post: "Yo", RepostsCount: "15", likesCount: "20", PostImage: <img src="./image/imageUser/7.jpg" alt=''/> },
+        { id: 8, Post: "Yo", RepostsCount: "15", likesCount: "20", PostImage: <img src="./image/imageUser/8.jpg" alt=''/> },
+        { id: 9, Post: "Great", RepostsCount: "15", likesCount: "20", PostImage: <img src="./image/imageUser/9.jpg" alt=''/> },
     ],
 
     newPostText:"",

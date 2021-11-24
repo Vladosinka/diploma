@@ -58,7 +58,7 @@
   .Button{
       position: relative;
       padding: 0px calc(50% - 35px);
-      bottom: -15vh;
+      margin-top: 110px;
   }
    
   @keyframes profile_image {
