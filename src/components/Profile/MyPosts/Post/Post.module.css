@@ -1,9 +1,33 @@
-.item{
+.item {
   color: rgb(25, 0, 255);
+  padding: 10px 0px;
+  background-color: white;
+  width: 520px;
+  border-radius: 5px;
+  padding: 8px 20px 20px;
+  margin: 5px 10px 10px 5px;
 }
 
-.item img{
+.flex {
+  display: flex;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.Name {
+  padding: 0px 20px;
+}
+
+.item img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+.menubar {
+  float: right
+}
+
+.message{
+  word-break: break-all;
 }

@@ -4,6 +4,7 @@
   margin: 0 10px 10px 10px;
   top: 0;
   position: sticky;
+  z-index: 1;
 }
 
 .header img {

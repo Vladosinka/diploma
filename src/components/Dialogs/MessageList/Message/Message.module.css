@@ -1,3 +1,4 @@
 .message{
     padding: 20px 25px;
+    word-break: break-all;
 }

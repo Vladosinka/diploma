@@ -12,6 +12,8 @@ const MyPosts = (props) => {
       RepostsCount={p.RepostsCount}
       likesCount={p.likesCount}
       PostImage={p.PostImage}
+      Name={p.Name}
+      Lastname={p.Lastname}
     />
   ));
 
